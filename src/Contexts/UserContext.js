@@ -1,4 +1,3 @@
-import { getSuggestedQuery } from "@testing-library/react";
 import React, { createContext, useState } from "react";
 import { TOKEN_POST, USER_GET } from "../service/api";
 
@@ -16,7 +15,6 @@ export const UserStorage = ({ children }) => {
     const json = await response.json();
     setData(json);
     setLogin(true);
-    console.log(token);
   }
 
   async function userLogin(username, password) {

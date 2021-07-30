@@ -1,4 +1,4 @@
-import React, { useEffect, userContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import useForm from "../../Hooks/useForm";
 import Button from "../Forms/Button";
@@ -9,7 +9,7 @@ const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const { userLogin } = userContext(UserContext);
+  const { userLogin } = useContext(UserContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -27,7 +27,7 @@ const LoginForm = () => {
         <Input label="Senha" type="password" name={password} {...password} />
         <Button>Entrar</Button>
       </form>
-      <Link to="/login/criar">Cadastro </Link>
+      <Link to="/login/criar">Cadastro</Link>
     </section>
   );
 };
