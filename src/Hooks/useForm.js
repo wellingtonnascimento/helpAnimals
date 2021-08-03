@@ -2,9 +2,13 @@ import { useState } from "react";
 
 const types = {
   email: {
-    regex:
-      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi,
+    regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
     message: "Preencha um email valido",
+  },
+  password: {
+    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/,
+    message:
+      "A senha precisa ter 1 caracter maíuscula, 1 minúscula, 1 digito, 1 caracteres especial e com no minimo 8 caracteres",
   },
 };
 
