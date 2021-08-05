@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import UserNavHeader from "./UserNavHeader";
+import UserHeaderNav from "./UserHeaderNav";
 import styles from "./UserHeader.module.css";
 import { useLocation } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const UserHeader = () => {
   return (
     <header className={styles.header}>
       <h1 className="title">{title}</h1>
-      <UserNavHeader />
+      <UserHeaderNav />
     </header>
   );
 };
