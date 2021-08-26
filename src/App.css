@@ -92,3 +92,13 @@ a {
 }
 
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: cal(100vh +10rem);
+}
+
+.AppBody{
+  flex: 1;
+}
+
